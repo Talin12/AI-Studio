@@ -1,6 +1,5 @@
 import { CreditCard, Bell, Cpu, Zap, Wand2, Rocket } from "lucide-react";
 import { cn } from "@/src/lib/utils";
-import videoSrc from "./Video_Generation_From_Prompt.mp4";
 
 export function AboutUs() {
   return (
@@ -13,9 +12,8 @@ export function AboutUs() {
             {/* Soft decorative blur */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 blur-3xl rounded-full -z-10" />
             
-            {/* Reverted to local asset: previous CDN URL was the globe video */}
             <video
-              src={videoSrc}
+              src="https://res.cloudinary.com/duk9coqow/video/upload/v1773889645/Video_Generation_From_Prompt_fxy92p.mp4"
               autoPlay
               loop
               muted

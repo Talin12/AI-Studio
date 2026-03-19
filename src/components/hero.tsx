@@ -10,7 +10,6 @@ export function Hero({ children }: { children?: React.ReactNode }) {
         
         {/* Background Video Container */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
-          {/* TODO: Move this MP4 to a CDN in production. The poster has been removed as it was a generic placeholder. */}
           <video
             autoPlay
             loop
