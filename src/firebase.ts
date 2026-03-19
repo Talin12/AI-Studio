@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
@@ -7,12 +8,12 @@ import { getFirestore } from 'firebase/firestore';
 // Since we are in a sandboxed environment, we'll use a placeholder that will be replaced by the platform.
 
 const firebaseConfig = {
-  apiKey: process.env.VITE_FIREBASE_API_KEY || "placeholder",
-  authDomain: process.env.VITE_FIREBASE_AUTH_DOMAIN || "placeholder",
-  projectId: process.env.VITE_FIREBASE_PROJECT_ID || "placeholder",
-  storageBucket: process.env.VITE_FIREBASE_STORAGE_BUCKET || "placeholder",
-  messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "placeholder",
-  appId: process.env.VITE_FIREBASE_APP_ID || "placeholder"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "placeholder",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "placeholder",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "placeholder",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "placeholder",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "placeholder",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "placeholder"
 };
 
 const app = initializeApp(firebaseConfig);
