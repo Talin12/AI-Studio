@@ -13,7 +13,7 @@ export function AboutUs() {
             {/* Soft decorative blur */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 blur-3xl rounded-full -z-10" />
             
-            {/* TODO: production - migrate this local .mp4 import to a dedicated CDN URL */}
+            {/* Reverted to local asset: previous CDN URL was the globe video */}
             <video
               src={videoSrc}
               autoPlay

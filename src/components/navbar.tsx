@@ -11,6 +11,9 @@ export function Navbar() {
         <a href="#about" className="hover:opacity-100 transition-opacity">About</a>
       </div>
       <div className="flex items-center space-x-6">
+        <button className="uppercase text-xs font-bold tracking-widest opacity-70 hover:opacity-100 transition-opacity flex items-center">
+          CART <ShoppingBag className="ml-2 w-4 h-4" />
+        </button>
         <Menu className="md:hidden w-6 h-6" />
       </div>
     </nav>

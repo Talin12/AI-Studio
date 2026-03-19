@@ -11,3 +11,19 @@ body {
   color: #ffffff;
   overflow-x: hidden;
 }
+
+@keyframes infinite-slide-horizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - calc(var(--gap) / 2))); }
+}
+@keyframes infinite-slide-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-50% - calc(var(--gap) / 2))); }
+}
+
+.animate-infinite-slide-horizontal {
+  animation: infinite-slide-horizontal linear infinite;
+}
+.animate-infinite-slide-vertical {
+  animation: infinite-slide-vertical linear infinite;
+}

@@ -24,23 +24,15 @@ export function InfiniteSlider({
   // Hardware accelerated and strictly out of the React rendering path.
   return (
     <div className={cn('overflow-hidden w-full h-full group', className)}>
-      <style>{`
-        @keyframes infinite-slide-horizontal {
-          from { transform: translateX(0); }
-          to { transform: translateX(calc(-50% - ${gap / 2}px)); }
-        }
-        @keyframes infinite-slide-vertical {
-          from { transform: translateY(0); }
-          to { transform: translateY(calc(-50% - ${gap / 2}px)); }
-        }
-      `}</style>
       <div
-        className="flex w-max"
+        className={cn("flex w-max", `animate-infinite-slide-${direction}`)}
         style={{
+          '--gap': `${gap}px`,
           gap: `${gap}px`,
           flexDirection: direction === 'horizontal' ? 'row' : 'column',
-          animation: `infinite-slide-${direction} ${duration}s linear infinite ${reverse ? 'reverse' : 'normal'}`,
-        }}
+          animationDuration: `${duration}s`,
+          animationDirection: reverse ? 'reverse' : 'normal',
+        } as React.CSSProperties}
       >
         {children}
         {children}

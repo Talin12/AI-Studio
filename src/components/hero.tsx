@@ -16,6 +16,7 @@ export function Hero({ children }: { children?: React.ReactNode }) {
             loop
             muted
             playsInline
+            poster="https://cdn.leonardo.ai/users/967a60fd-7be0-4ca9-9d47-f0cffca88c73/generations/f2577088-a22e-43e9-8657-f1e31c4c17ed/segments/1:1:1/poster.webp"
             className="w-full h-full object-cover"
           >
             <source src="https://cdn.leonardo.ai/users/967a60fd-7be0-4ca9-9d47-f0cffca88c73/generations/f2577088-a22e-43e9-8657-f1e31c4c17ed/segments/1:1:1/motion2Fast_Subtle_noticeable_animation_with_looping_motion_no_0.mp4" type="video/mp4" />
